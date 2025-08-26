@@ -7,7 +7,7 @@ html
     meta(name='viewport', content='width=device-width, initial-scale=1')
     link(rel='stylesheet', href='/public/style.css')
   body
-    h1.border.center FCC Advanced Node and Express
+    h1.border.center Profile Home
     h2.center#pug-success-message
     | Looks like this page is being rendered from Pug into HTML!
     | #{title}
@@ -18,7 +18,7 @@ html
     if showLogin
       hr
       h2.center Login Form
-      form(action='/login', method='post').center
+      form(action='/login', method='POST').center
         div
           label Username:
           input(type='text', name='username')
@@ -31,7 +31,7 @@ html
     if showRegistration
       hr
       h2.center Registration Form
-      form(action='/register', method='post').center
+      form(action='/register', method='POST').center
         div
           label Username:
           input(type='text', name='username')
