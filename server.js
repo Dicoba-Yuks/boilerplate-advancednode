@@ -1,4 +1,5 @@
 'use strict';
+module.exports = app;
 require('dotenv').config();
 const express = require('express');
 const myDB = require('./connection');
@@ -19,6 +20,5 @@ app.route('/').get((req, res) => {
 });
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Listening on port ${PORT}`);
+
 });
