@@ -15,7 +15,13 @@ app.use(express.urlencoded({ extended: true }));
 
 app.route('/').get((req, res) => {
   // Change the response to render the Pug template
-  res.render('index');
+  res.render('index', {
+    title: 'FCC Advanced Node', // Untuk | #{title}
+    message: 'Please login', // Untuk p#pug-variable=message
+    showLogin: true, // Untuk if showLogin
+    showRegistration: false, // Untuk if showRegistration
+    showSocialAuth: false // Untuk if showSocialAuth
+  });
 });
 
 module.exports = app;
